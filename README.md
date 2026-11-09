@@ -34,9 +34,6 @@ have to open the console.
 
 ## Database
 
-The app uses the `pa2` database, so the users and projects from earlier
-assignments still work. It has four collections:
-
 - `users`: `f_name`, `l_name`, `username`, `password`
 - `projects`: `name`, `description`, `status`, `project_lead_id`
 - `projectMemberships`: `project_id`, `user_id`
@@ -89,27 +86,11 @@ npm run dev
 
 Then open http://localhost:5173. The backend runs on port 9000.
 
-## Preparing test data
-
-Everything can be set up from the app itself:
-
-1. On **Sign Up**, create at least three users.
-2. On **New Project**, create two projects with different Project Leads.
-3. On **Members**, add a user to one project who is not in the other (so there is
-   at least one non-lead member).
-4. On **Backlog**, pick each project and add at least five stories in total, with
-   all three priorities. Edit some of them to set In Progress and Done, and
-   leave some unassigned.
-
 ## .env
 
 The server reads the MongoDB connection string from `server/.env`, which is not
 committed. Copy `server/.env.example` to `server/.env` and fill in your Atlas
-connection string:
-
-```
-MONGO_URI=mongodb+srv://USERNAME:PASSWORD@cluster...
-```
+connection string
 
 ## Files
 
